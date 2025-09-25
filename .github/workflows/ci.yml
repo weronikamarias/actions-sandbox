@@ -30,8 +30,8 @@ jobs:
       - name: Run tests (fake)
         run: |
           echo "Running tests on Node ${{ matrix.node }}"
-          # Make one matrix run fail on purpose to see failure in the UI:
-          if [ "${{ matrix.node }}" = "20" ]; then exit 1; fi
+          echo "Pretend tests passed ✔"
+
 
   lint:
     needs: build
